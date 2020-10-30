@@ -1,0 +1,231 @@
+body {
+  background-color: #0b0c10;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.row {
+  width: 100%;
+}
+
+.nav {
+  width: 100%;
+}
+
+.logo {
+  padding: 5px 5px 5px 10px;
+  height: 70px;
+}
+
+.text {
+  font-family: "Libre Franklin", sans-serif;
+  margin: 33px auto;
+}
+
+.logo-text {
+  position: absolute;
+  font-family: "Satisfy", cursive;
+  color: #c5c6c7;
+  padding-top: 30px;
+  font-size: 1.5rem;
+}
+
+.logo-box {
+  margin-right: 33%;
+}
+
+.navlink {
+  color: #c5c6c7;
+}
+
+.navlink:hover {
+  color: #c5c6c7;
+  text-decoration: none;
+}
+
+.nav-tabs {
+  border-bottom: none;
+}
+
+.search {
+  width: 30%;
+  margin-left: 50%;
+}
+
+.search-box {
+  width: 100%;
+  background: #0b0c10;
+  height: 80px;
+  padding: 10px;
+  transform: translate(50%, 25%);
+}
+
+.search-box:hover > .search-txt {
+  width: 150px !important;
+  padding: 0 6px;
+}
+
+.search-box:hover > .search-btn {
+  background: #45a29e;
+}
+
+.search-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #0b0c10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.searchBox {
+  width: 100%;
+  text-align: left;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.search-logo {
+  color: #c5c6c7;
+  width: 25px;
+  height: 25px;
+}
+
+.search-txt {
+  font-family: "Libre Franklin", sans-serif;
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: #c5c6c7;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0px;
+}
+
+.footer {
+  width: 100%;
+  background: #15323a;
+  color: #c5c6c7;
+}
+
+.info {
+  padding-top: 30px;
+  padding-left: 70px;
+}
+
+.plus {
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: default;
+}
+
+.plus:hover {
+  cursor: default;
+}
+
+.social {
+  width: 100%;
+  font-family: "Libre Franklin", sans-serif;
+  list-style: none;
+  color: #c5c6c7;
+  display: flex;
+  min-height: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.social li {
+  display: inline;
+  margin: 4px;
+}
+
+.socialname {
+  font-family: "Libre Franklin", sans-serif;
+  color: #c5c6c7;
+  font-weight: normal;
+}
+
+.twitter:hover {
+  text-decoration: none;
+  background-color: #1da1f3;
+  color: #ffffff;
+}
+
+.pinterest:hover {
+  color: #ffffff;
+  background-color: #ee1b22;
+  text-decoration: none;
+}
+
+.instagram:hover {
+  background: linear-gradient(90deg, #2c2f85 15%, #bf244b 51%, #e1a833 92%);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.behance:hover {
+  color: #ffffff;
+  background-color: #0057ff;
+  text-decoration: none;
+}
+
+.copyright {
+  font-size: 0.75em;
+  font-family: "Libre Franklin", sans-serif;
+  color: #c5c6c7;
+  cursor: default;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 20px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 992px) {
+  .socials {
+    margin: 30px auto;
+  }
+
+  .searchBox {
+    display: block;
+  }
+
+  .social li {
+    margin: 1.5px;
+  }
+}
+
+@media only screen and (min-width: 1700px) and (min-height: 750px) and (max-height: 1000px) {
+  .logo-box {
+    margin-right: 41%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .info {
+    padding-left: 30px;
+  }
+}
+
+/*mobile*/
+@media only screen and (max-width: 425px) {
+  #root {
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    width: 100%;
+  }
+
+  .logo-box {
+    margin-right: 0%;
+    width: 100%;
+  }
+}

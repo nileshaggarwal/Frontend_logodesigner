@@ -1,0 +1,39 @@
+.aboutme {
+  color: #c5c6c7;
+}
+
+h1 {
+  text-align: center;
+  margin: 100px 0px;
+}
+
+.start {
+  text-align: center;
+  font-size: 30px;
+}
+
+.explain {
+  text-align: left;
+  font-size: 20px;
+  margin-top: 8px;
+  margin-bottom: 80px;
+}
+
+@media only screen and (max-width: 767px) {
+  .row {
+    margin: 0;
+  }
+
+  .explain {
+    width: 80%;
+    margin: 8px auto 80px;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .explain {
+    font-size: 15px;
+    text-align: center;
+  }
+}

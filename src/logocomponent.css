@@ -1,0 +1,32 @@
+.logo_component {
+  margin: 50px 0px 100px 0px;
+  font-family: "Merienda", cursive;
+  font-size: 1.2rem;
+}
+
+.logo_img {
+  width: 100%;
+  text-align: center;
+}
+
+.image {
+  text-align: center;
+}
+
+.compo_text {
+  color: #c5c6c7;
+}
+
+.compo_text span {
+  color: #82ece7;
+}
+
+@media only screen and (max-width: 767px) {
+  .compo_text div {
+    margin-top: 10%;
+  }
+}
+
+.compo_text div {
+  top: 10%;
+}
