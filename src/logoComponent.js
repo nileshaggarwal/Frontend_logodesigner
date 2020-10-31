@@ -2,12 +2,13 @@ import React, { useEffect, useState } from 'react';
 import Base from './core/Base';
 import Footer from './core/Footer';
 import './logocomponent.css';
+import Loading from './Loading';
 
 const LogoComponent = ({ match }) => {
 	const [logos, setLogos] = useState([]);
 
 	const preload = logo_id => {
-		fetch('https://boiling-ocean-43424.herokuapp.com/logos?id=' + logo_id)
+		fetch(' https://boiling-ocean-43424.herokuapp.com/logos?id=' + logo_id)
 			.then(res => res.json())
 			.then(logo => {
 				setLogos(logo);
@@ -55,11 +56,15 @@ const LogoComponent = ({ match }) => {
 	return (
 		<div>
 			<Base />
-			{logos.map((logo, index) => (
-				<div className='logo_component' key={index}>
-					{cardEnlarge(logo)}
-				</div>
-			))}
+			{logos.length == 0 ? (
+				<Loading color={'#50a8e0'} />
+			) : (
+				logos.map((logo, index) => (
+					<div className='logo_component' key={index}>
+						{cardEnlarge(logo)}
+					</div>
+				))
+			)}
 			<div className='footeradjust'>
 				<Footer />
 			</div>

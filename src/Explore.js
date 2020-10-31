@@ -27,20 +27,20 @@ class Explore extends Component {
 			logos: [],
 			categories: [],
 			searchQuery: '',
-			noResults: true,
+			noResults: false,
 		};
 	}
 
 	onCategoryChange = text => {
 		this.setState({ logos: [], noResults: false });
 		if (text === 'All')
-			fetch('https://boiling-ocean-43424.herokuapp.com/logos')
+			fetch(' https://boiling-ocean-43424.herokuapp.com/logos')
 				.then(resp => resp.json())
 				.then(logos =>
 					this.setState({ logos: logos.reverse(), noResults: false })
 				);
 		else
-			fetch('https://boiling-ocean-43424.herokuapp.com/categories?name=' + text.toLowerCase())
+			fetch(' https://boiling-ocean-43424.herokuapp.com/categories?name=' + text.toLowerCase())
 				.then(re => re.json())
 				.then(logos => {
 					if (logos.length == 0) this.setState({ noResults: true });
@@ -52,13 +52,13 @@ class Explore extends Component {
 		this.setState({ logos: [], noResults: false });
 		this.setState({ searchQuery });
 		if (searchQuery.toLowerCase().length == 0) {
-			fetch('https://boiling-ocean-43424.herokuapp.com/logos')
+			fetch(' https://boiling-ocean-43424.herokuapp.com/logos')
 				.then(resp => resp.json())
 				.then(logos =>
 					this.setState({ logos: logos.reverse(), noResults: false })
 				);
 		} else {
-			fetch('https://boiling-ocean-43424.herokuapp.com/search?hash=' + searchQuery)
+			fetch(' https://boiling-ocean-43424.herokuapp.com/search?hash=' + searchQuery)
 				.then(r => r.json())
 				.then(logos => {
 					if (logos.length == 0) this.setState({ noResults: true });
@@ -69,13 +69,13 @@ class Explore extends Component {
 	};
 
 	componentDidMount() {
-		fetch('https://boiling-ocean-43424.herokuapp.com/logos')
+		fetch(' https://boiling-ocean-43424.herokuapp.com/logos')
 			.then(resp => resp.json())
 			.then(logos =>
 				this.setState({ logos: logos.reverse(), noResults: false })
 			);
 
-		fetch('https://boiling-ocean-43424.herokuapp.com/allcategs')
+		fetch(' https://boiling-ocean-43424.herokuapp.com/allcategs')
 			.then(resp => resp.json())
 			.then(re => re.map(cate => cate.charAt(0).toUpperCase() + cate.slice(1)))
 			.then(categories => this.setState({ categories: categories.reverse() }));
@@ -84,7 +84,7 @@ class Explore extends Component {
 	render() {
 		return (
 			<div>
-				<Base route={68} onSearchChange={this.onSearchChange} />
+				<Base route={69} onSearchChange={this.onSearchChange} />
 				<Exploree />
 				{this.state.categories && (
 					<CategoryDropdown
