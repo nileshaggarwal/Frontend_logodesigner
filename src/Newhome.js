@@ -2,9 +2,9 @@ import React from 'react'
 import Base from './core/Base'
 import Footer from './core/Footer'
 import './Newhome.css'
-import image from "./images/final.png";
+import image from "./images/A.png";
 import elements from "./images/elements2.png";
-import customer from "./images/customer2.png";
+import customer from "./images/B.png";
 import message from "./images/whychooseme.png";
 import LightSpeed from 'react-reveal/LightSpeed';
 import Zoom from "react-reveal/Zoom";
