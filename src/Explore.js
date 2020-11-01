@@ -84,7 +84,7 @@ class Explore extends Component {
 	render() {
 		return (
 			<div>
-				<Base route={69} onSearchChange={this.onSearchChange} />
+				<Base route={68} onSearchChange={this.onSearchChange} />
 				<Exploree />
 				{this.state.categories && (
 					<CategoryDropdown
