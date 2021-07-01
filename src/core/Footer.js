@@ -17,7 +17,7 @@ const Footer = () => {
 								target='_blank'
 								rel='noopener noreferrer'
 								className='socialname instagram'
-								href='https://instagram.com/__logo_designer?igshid=o1o9i3zlbe64'
+								href='https://instagram.com/logo_dzns?utm_medium=copy_link'
 							>
 								Instagram
 							</a>
