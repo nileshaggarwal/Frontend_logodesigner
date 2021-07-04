@@ -3,12 +3,13 @@ import Base from "./core/Base";
 import Footer from "./core/Footer";
 import "./logocomponent.css";
 import Loading from "./Loading";
+import API from "./backend"
 
 const LogoComponent = ({ match }) => {
 	const [logos, setLogos] = useState([]);
 
 	const preload = logo_id => {
-		fetch(" https://boiling-ocean-43424.herokuapp.com/logos?id=" + logo_id)
+		fetch(API + logo_id)
 			.then(res => res.json())
 			.then(logo => {
 				setLogos(logo);
