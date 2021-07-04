@@ -9,7 +9,7 @@ const LogoComponent = ({ match }) => {
 	const [logos, setLogos] = useState([]);
 
 	const preload = logo_id => {
-		fetch(API + logo_id)
+		fetch(API +"/"+ logo_id)
 			.then(res => res.json())
 			.then(logo => {
 				setLogos(logo);
